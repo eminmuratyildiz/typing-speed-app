@@ -37,15 +37,14 @@ export const wordSlice = createSlice({
           : (state.words[state.writedWords.length].bg = "red");
         return item;
       });
-      if (action.payload > 48) {
-        if (
-          splitWord[splitCurrentWord.length - 1] !==
-          splitCurrentWord[splitCurrentWord.length - 1]
-        ) {
-          state.errorLetter++;
-        } else {
-          state.successLetter++;
-        }
+
+      if (
+        splitWord[splitCurrentWord.length - 1] !==
+        splitCurrentWord[splitCurrentWord.length - 1]
+      ) {
+        state.errorLetter++;
+      } else {
+        state.successLetter++;
       }
     },
     checkWord: (state) => {

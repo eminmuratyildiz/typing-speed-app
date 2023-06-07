@@ -7,9 +7,10 @@ import InputArea from "./components/InputArea";
 import SelectArea from "./components/SelectArea";
 
 function App() {
-  const { top, wordIndex, start, time, finish } = useSelector(
+  const { top, wordIndex, start, time, finish, errorLetter } = useSelector(
     (state) => state.data
   );
+  console.log(errorLetter);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(bgFirst());

@@ -20,7 +20,7 @@ function InputArea() {
           if (e.code === "Space") {
             dispatch(checkWord());
           }
-          dispatch(checkLetter(e.keyCode));
+          dispatch(checkLetter());
         }}
         className="w-3/5 rounded outline-none px-1 text-3xl times"
         disabled={finish}
